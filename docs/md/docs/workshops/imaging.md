@@ -1,27 +1,15 @@
 # Image and video processing
 
+Took from the [ml5](https://ml5js.org/) example [here](https://learn.ml5js.org/#/reference/facemesh?id=examples). Also shows how to load an image.
 
->PImage image1, image2;
->void setup() {
->  size(1000, 1000);
->  image1 = loadImage("landscape.jpg");
->  image2 = loadImage("landscape.jpg");
->}
+> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/lib.js, width=512, height=512
 
->void draw() {
->  background(0,0,0);
->  int halfImage = width*height/2;
->  image1.resize(1000,500);
->  image(image1, 0, 0);
->  loadPixels();
->  for (int i = 0; i < halfImage; i++) {
->      float r = 255-red(pixels[i]);
->      float g = 255-green(pixels[i]);
->      float b = 255-blue(pixels[i]);
->      color c = color(r,g,b);
->      pixels[i+halfImage] = c;
->  }
->  updatePixels();
->}
+The markdown of the above sketch looks like:
+
+```md
+> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/lib.js, width=512, height=512
+```
+
+Check the [component specs](/docs/snippets/component) for details.
 
 > :ToCPrevNext
